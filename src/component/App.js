@@ -1,13 +1,25 @@
+import React from 'react';
+import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
+
+import Home from '../component/Pages/Home';
+import Details from '../component/Pages/Details';
+
 import './App.css';
 
-import Results from './Sections/Results';
-
-function App({jobs}) {
+function App() {
   return (
-    <div className="App">
-      Upgraded
-      <Results jobs={jobs} />
-    </div>
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/details">
+            <Details />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
