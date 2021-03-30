@@ -5,9 +5,12 @@ import { Provider } from "react-redux";
 import './index.css';
 
 import store from './store/index';
+import { fetchJobs } from './features/jobs/jobsSlice';
 
 import App from './component/App';
 import reportWebVitals from './reportWebVitals';
+
+store.dispatch(fetchJobs());
 
 ReactDOM.render(
   <React.StrictMode>
