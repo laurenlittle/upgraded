@@ -10,7 +10,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App jobs={store.getState()} />
+    <App jobs={store.getState().jobsState} />
   </React.StrictMode>,
   document.getElementById('root')
 );
